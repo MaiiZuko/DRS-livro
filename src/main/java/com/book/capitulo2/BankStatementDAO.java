@@ -1,3 +1,5 @@
+package com.book.capitulo2;
+
 import java.time.LocalDate;
 
 public class BankStatementDAO {

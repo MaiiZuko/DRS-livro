@@ -1,3 +1,4 @@
+package com.book.capitulo2;
 
 public class MainApplication {
     public static void main(final String[] args) throws Exception {

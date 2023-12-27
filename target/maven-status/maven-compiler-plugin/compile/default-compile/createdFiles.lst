@@ -1,8 +1,8 @@
-TransacaoBancaria.class
-BankStatementDAO.class
-TransacoesPorMes.class
-BankStatementCSVParser.class
-BankStatementParser.class
-MainApplication.class
-BankStatementProcessor.class
-Extrato.class
+com\book\capitulo2\BankStatementDAO.class
+com\book\capitulo2\TransacaoBancaria.class
+com\book\capitulo2\BankStatementCSVParser.class
+com\book\capitulo2\BankStatementParser.class
+com\book\capitulo2\BankStatementProcessor.class
+com\book\capitulo2\Extrato.class
+com\book\capitulo2\MainApplication.class
+com\book\capitulo2\TransacoesPorMes.class

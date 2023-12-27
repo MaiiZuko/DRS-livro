@@ -1,3 +1,5 @@
+package com.book.capitulo2;
+
 import java.util.Objects;
 import java.time.LocalDate;
 
