@@ -1,0 +1,8 @@
+TransacaoBancaria.class
+BankStatementDAO.class
+TransacoesPorMes.class
+BankStatementCSVParser.class
+BankStatementParser.class
+MainApplication.class
+BankStatementProcessor.class
+Extrato.class
