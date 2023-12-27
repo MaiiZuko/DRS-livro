@@ -1,8 +1,8 @@
 import java.time.LocalDate;
 import java.util.List;
 import java.time.format.DateTimeFormatter;
-import java.util.ArrayList;
 
+import static java.util.stream.Collectors.toList; // Importando toList
 
 public class BankStatementCSVParser {
     
@@ -13,17 +13,11 @@ public class BankStatementCSVParser {
 
         final LocalDate date = LocalDate.parse(colunas[0], DATA_PATTERN);
         double valor = Double.parseDouble(colunas[1]);
-        final String description = colunas[2];
 
-        return new TransacaoBancaria(date, valor, description);
+        return new TransacaoBancaria(date, valor, colunas[2]);
     }
 
     public List<TransacaoBancaria> parseLinesFromCSV(final List<String> lines){
-        final List<TransacaoBancaria> transacaoBancarias = new ArrayList<>();
-        for(final String line:lines) {
-            transacaoBancarias.add(parseFromCSV(line));
-        }
-        return transacaoBancarias;
+        return lines.stream().map(this::parseFromCSV).collect(toList()); 
     }
 }
-
