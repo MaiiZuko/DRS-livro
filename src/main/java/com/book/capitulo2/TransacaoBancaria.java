@@ -46,6 +46,7 @@ public class TransacaoBancaria {
 
     }
 
+    //hashCode
     @Override
     public int hashCode() {
         return Objects.hash(date, valor, description);
