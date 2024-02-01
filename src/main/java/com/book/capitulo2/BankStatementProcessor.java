@@ -2,6 +2,9 @@ package com.book.capitulo2;
 
 import java.time.Month;
 import java.util.List;
+import java.util.ArrayList;
+
+import com.book.BankTransactionFilter;
 
 public class BankStatementProcessor {
     private final List<TransacaoBancaria> transacaoBancarias;
@@ -36,5 +39,15 @@ public class BankStatementProcessor {
             }
         }
         return total;
+    }
+
+    public List<TransacaoBancaria> findTransactions(final BankTransactionFilter bankTransactionFilter){
+        final List<TransacaoBancaria> result = new ArrayList();
+        for (final TransacaoBancaria transacaoBancaria : transacaoBancarias) {
+            if(bankTransactionFilter.test(transacaoBancaria)) {
+                result.add(transacaoBancaria);
+            }
+        }
+        return result;
     }
 }
