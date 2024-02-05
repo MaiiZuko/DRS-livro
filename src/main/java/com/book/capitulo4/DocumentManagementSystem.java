@@ -43,7 +43,7 @@ public class DocumentManagementSystem {
                 throw new UnknownFileTypeException("For file: " + path);
             }
 
-            final Document document = importer.importFile(file);
+            final Document document = (Document) importer.importFile(file);
             documents.add(document);
         } else {
             throw new UnknownFileTypeException("No extension found For file: " + path);
