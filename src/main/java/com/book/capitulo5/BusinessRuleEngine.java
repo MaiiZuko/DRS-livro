@@ -8,13 +8,9 @@ public class BusinessRuleEngine {
     private final List<Action> actions;
     private final Facts facts;
 
-    public BusinessRuleEngine() {
+    public BusinessRuleEngine(final Facts facts) {
         this.facts = facts;
         this.actions = new ArrayList<>();
-    }
-
-    public BusinessRuleEngine() {
-        //TODO Auto-generated constructor stub
     }
 
     public void addAction(final Action action) {
