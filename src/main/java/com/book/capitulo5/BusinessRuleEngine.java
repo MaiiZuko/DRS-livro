@@ -6,9 +6,15 @@ import java.util.List;
 public class BusinessRuleEngine {
     
     private final List<Action> actions;
+    private final Facts facts;
 
     public BusinessRuleEngine() {
+        this.facts = facts;
         this.actions = new ArrayList<>();
+    }
+
+    public BusinessRuleEngine() {
+        //TODO Auto-generated constructor stub
     }
 
     public void addAction(final Action action) {
@@ -20,6 +26,7 @@ public class BusinessRuleEngine {
     }
 
     public void run() {
-        throw new UnsupportedOperationException();
+        this.actions.forEach(rule -> rule.perform(facts));
     }
+    
 }
