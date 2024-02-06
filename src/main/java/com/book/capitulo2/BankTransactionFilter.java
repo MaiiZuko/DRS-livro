@@ -1,6 +1,4 @@
-package com.book;
-
-import com.book.capitulo2.TransacaoBancaria;
+package com.book.capitulo2;
 
 @FunctionalInterface //Interface com apenas um único método abstrato
 public interface BankTransactionFilter {
